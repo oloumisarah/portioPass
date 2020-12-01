@@ -51,6 +51,10 @@ class LandingPageViewController: UIViewController, UIAdaptivePresentationControl
         }
     }
     
+    func setUpPasswordInfo() {
+        
+    }
+    
     func setAccountButtons() {
        
         for account in accounts {

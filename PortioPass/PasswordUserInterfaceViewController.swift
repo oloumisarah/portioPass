@@ -22,7 +22,8 @@ class PasswordUserInterfaceViewController: UIViewController {
     
     @IBOutlet weak var shareBtn: UIBarButtonItem!
     
-    let db = Firestore.firestore()
+    private var userCollectionRef: CollectionReference!
+    
     struct User {
         var UID: String
         var firstName: String
@@ -33,31 +34,35 @@ class PasswordUserInterfaceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        userCollectionRef = Firestore.firestore().collection("users")
         populateUsers {
             self.setAccountButtons()
         }
     }
     
     func populateUsers( completion: @escaping ()-> Void) {
-        db.collection("users").getDocuments() { (snapshot, err) in
+       let currentUID = userCollectionRef.document(Auth.auth().currentUser!.uid)
+        userCollectionRef.getDocuments { (snapshot, err) in
             if let err = err {
                 print("Error getting users: \(err)")
             } else {
-                for document in snapshot!.documents {
-                    let userFirstName = document.get("firstName") as! String
-                    let userLastName = document.get("lastName") as! String
-                    self.users.append(User(UID: document.documentID, firstName: userFirstName, lastName: userLastName))
-                    
-                    print(self.users)
-                    
+                guard let snap = snapshot else {
+                    return
+                }
+                for document in snap.documents {
+                    // need to remove current user from the list
+                    if (currentUID.documentID != document.documentID) {
+                        let data = document.data()
+                        let userFirstName = data["firstName"] as? String ?? ""
+                        let userLastName = data["lastName"] as? String ?? ""
+                        self.users.append(User(UID: document.documentID, firstName: userFirstName, lastName: userLastName))
+                    }
                 }
             }
-            print(self.users)
             completion()
         }
-        
     }
+    
     
     func setAccountButtons() {
         
@@ -68,7 +73,7 @@ class PasswordUserInterfaceViewController: UIViewController {
             button.layer.borderColor = #colorLiteral(red: 0.2903735017, green: 0.7607288099, blue: 0.6868186358, alpha: 1)
             button.layer.cornerRadius = 15
             button.layer.borderWidth = 1
-            button.setTitle(String(describing: user.firstName + user.lastName), for: .normal)
+            button.setTitle(String(describing: user.firstName + " " + user.lastName), for: .normal)
             button.setTitleColor(#colorLiteral(red: 0.2901960784, green: 0.7607843137, blue: 0.7607843137, alpha: 1), for: .normal)
             stackView.addArrangedSubview(button)
             button.addTarget(self, action: #selector(self.buttonTapped), for: .touchUpInside)
