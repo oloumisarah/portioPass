@@ -1,0 +1,6 @@
+framework module Pods_PortioPass_PortioPassUITests {
+  umbrella header "Pods-PortioPass-PortioPassUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

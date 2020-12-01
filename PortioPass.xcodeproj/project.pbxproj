@@ -3,18 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DE1B515256BDDFD00D760AD /* PasswordUserInterfaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE1B514256BDDFD00D760AD /* PasswordUserInterfaceViewController.swift */; };
 		3DECB340254FB14100E2FD38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DECB33F254FB14100E2FD38 /* AppDelegate.swift */; };
 		3DECB342254FB14100E2FD38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DECB341254FB14100E2FD38 /* SceneDelegate.swift */; };
 		3DECB344254FB14100E2FD38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DECB343254FB14100E2FD38 /* ViewController.swift */; };
-		3DECB347254FB14100E2FD38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DECB345254FB14100E2FD38 /* Main.storyboard */; };
 		3DECB349254FB14200E2FD38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DECB348254FB14200E2FD38 /* Assets.xcassets */; };
-		3DECB34C254FB14200E2FD38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DECB34A254FB14200E2FD38 /* LaunchScreen.storyboard */; };
 		3DECB357254FB14200E2FD38 /* PortioPassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DECB356254FB14200E2FD38 /* PortioPassTests.swift */; };
 		3DECB362254FB14200E2FD38 /* PortioPassUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DECB361254FB14200E2FD38 /* PortioPassUITests.swift */; };
+		3DECB377254FB1B000E2FD38 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DECB376254FB1B000E2FD38 /* Utilities.swift */; };
+		3DECB37E254FB1BF00E2FD38 /* LandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DECB37B254FB1BF00E2FD38 /* LandingPageViewController.swift */; };
+		3DECB37F254FB1BF00E2FD38 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DECB37C254FB1BF00E2FD38 /* SignUpViewController.swift */; };
+		3DECB380254FB1BF00E2FD38 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DECB37D254FB1BF00E2FD38 /* LoginViewController.swift */; };
+		3DECB386254FB1D200E2FD38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DECB384254FB1D200E2FD38 /* LaunchScreen.storyboard */; };
+		3DECB387254FB1D200E2FD38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DECB385254FB1D200E2FD38 /* Main.storyboard */; };
+		3DECB38F254FB2F800E2FD38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DECB38E254FB2F800E2FD38 /* GoogleService-Info.plist */; };
+		3DECB3F125506F2900E2FD38 /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DECB3F025506F2900E2FD38 /* Variables.swift */; };
+		3DECB3F62550867700E2FD38 /* AddPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DECB3F52550867700E2FD38 /* AddPasswordViewController.swift */; };
+		57F2188946836BADE00A355B /* Pods_PortioPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D486FDE823FB1E38691CA00 /* Pods_PortioPass.framework */; };
+		6531D297411506CEA1048724 /* Pods_PortioPass_PortioPassUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D26ED6B404A9E0C626BA9233 /* Pods_PortioPass_PortioPassUITests.framework */; };
+		E65F0B45328DC023F3722831 /* Pods_PortioPassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB6183BD50579C1D74DE1B48 /* Pods_PortioPassTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,13 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1AC7D69701CFE27768EDCF9A /* Pods-PortioPass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PortioPass.release.xcconfig"; path = "Target Support Files/Pods-PortioPass/Pods-PortioPass.release.xcconfig"; sourceTree = "<group>"; };
+		3D8E6705255EB59600BEBAD8 /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
+		3DE1B514256BDDFD00D760AD /* PasswordUserInterfaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordUserInterfaceViewController.swift; sourceTree = "<group>"; };
 		3DECB33C254FB14100E2FD38 /* PortioPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PortioPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DECB33F254FB14100E2FD38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DECB341254FB14100E2FD38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3DECB343254FB14100E2FD38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3DECB346254FB14100E2FD38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DECB348254FB14200E2FD38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3DECB34B254FB14200E2FD38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DECB34D254FB14200E2FD38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DECB352254FB14200E2FD38 /* PortioPassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PortioPassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DECB356254FB14200E2FD38 /* PortioPassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortioPassTests.swift; sourceTree = "<group>"; };
@@ -49,6 +61,23 @@
 		3DECB35D254FB14200E2FD38 /* PortioPassUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PortioPassUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DECB361254FB14200E2FD38 /* PortioPassUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortioPassUITests.swift; sourceTree = "<group>"; };
 		3DECB363254FB14200E2FD38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DECB376254FB1B000E2FD38 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		3DECB37B254FB1BF00E2FD38 /* LandingPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPageViewController.swift; sourceTree = "<group>"; };
+		3DECB37C254FB1BF00E2FD38 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3DECB37D254FB1BF00E2FD38 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3DECB384254FB1D200E2FD38 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3DECB385254FB1D200E2FD38 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3DECB38E254FB2F800E2FD38 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3DECB3F025506F2900E2FD38 /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
+		3DECB3F52550867700E2FD38 /* AddPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPasswordViewController.swift; sourceTree = "<group>"; };
+		3FFE649D4EED639A00A2FA60 /* Pods-PortioPass-PortioPassUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PortioPass-PortioPassUITests.debug.xcconfig"; path = "Target Support Files/Pods-PortioPass-PortioPassUITests/Pods-PortioPass-PortioPassUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4D486FDE823FB1E38691CA00 /* Pods_PortioPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PortioPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68A6010EC7D27B50A37F0A1C /* Pods-PortioPassTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PortioPassTests.release.xcconfig"; path = "Target Support Files/Pods-PortioPassTests/Pods-PortioPassTests.release.xcconfig"; sourceTree = "<group>"; };
+		83E34D00526A21732F00CCE5 /* Pods-PortioPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PortioPass.debug.xcconfig"; path = "Target Support Files/Pods-PortioPass/Pods-PortioPass.debug.xcconfig"; sourceTree = "<group>"; };
+		A867F60C86A5FD0A594F43E6 /* Pods-PortioPass-PortioPassUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PortioPass-PortioPassUITests.release.xcconfig"; path = "Target Support Files/Pods-PortioPass-PortioPassUITests/Pods-PortioPass-PortioPassUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BB6183BD50579C1D74DE1B48 /* Pods_PortioPassTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PortioPassTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D26ED6B404A9E0C626BA9233 /* Pods_PortioPass_PortioPassUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PortioPass_PortioPassUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F997FE2B1D37785E648FA1FE /* Pods-PortioPassTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PortioPassTests.debug.xcconfig"; path = "Target Support Files/Pods-PortioPassTests/Pods-PortioPassTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57F2188946836BADE00A355B /* Pods_PortioPass.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E65F0B45328DC023F3722831 /* Pods_PortioPassTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,19 +101,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6531D297411506CEA1048724 /* Pods_PortioPass_PortioPassUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		011F9D8A4BDD85D8CCFAFEB9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83E34D00526A21732F00CCE5 /* Pods-PortioPass.debug.xcconfig */,
+				1AC7D69701CFE27768EDCF9A /* Pods-PortioPass.release.xcconfig */,
+				3FFE649D4EED639A00A2FA60 /* Pods-PortioPass-PortioPassUITests.debug.xcconfig */,
+				A867F60C86A5FD0A594F43E6 /* Pods-PortioPass-PortioPassUITests.release.xcconfig */,
+				F997FE2B1D37785E648FA1FE /* Pods-PortioPassTests.debug.xcconfig */,
+				68A6010EC7D27B50A37F0A1C /* Pods-PortioPassTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3DECB333254FB14100E2FD38 = {
 			isa = PBXGroup;
 			children = (
+				3DECB3EF25506EF100E2FD38 /* PortioPassLibrary */,
+				3DECB372254FB14900E2FD38 /* Storyboards */,
 				3DECB33E254FB14100E2FD38 /* PortioPass */,
 				3DECB355254FB14200E2FD38 /* PortioPassTests */,
 				3DECB360254FB14200E2FD38 /* PortioPassUITests */,
 				3DECB33D254FB14100E2FD38 /* Products */,
+				011F9D8A4BDD85D8CCFAFEB9 /* Pods */,
+				FA5A6CAADDD610B8A5C7E418 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,12 +148,16 @@
 		3DECB33E254FB14100E2FD38 /* PortioPass */ = {
 			isa = PBXGroup;
 			children = (
+				3DECB38E254FB2F800E2FD38 /* GoogleService-Info.plist */,
 				3DECB33F254FB14100E2FD38 /* AppDelegate.swift */,
+				3DECB3F52550867700E2FD38 /* AddPasswordViewController.swift */,
+				3DECB37B254FB1BF00E2FD38 /* LandingPageViewController.swift */,
+				3DECB37D254FB1BF00E2FD38 /* LoginViewController.swift */,
+				3DE1B514256BDDFD00D760AD /* PasswordUserInterfaceViewController.swift */,
 				3DECB341254FB14100E2FD38 /* SceneDelegate.swift */,
+				3DECB37C254FB1BF00E2FD38 /* SignUpViewController.swift */,
 				3DECB343254FB14100E2FD38 /* ViewController.swift */,
-				3DECB345254FB14100E2FD38 /* Main.storyboard */,
 				3DECB348254FB14200E2FD38 /* Assets.xcassets */,
-				3DECB34A254FB14200E2FD38 /* LaunchScreen.storyboard */,
 				3DECB34D254FB14200E2FD38 /* Info.plist */,
 			);
 			path = PortioPass;
@@ -128,6 +181,35 @@
 			path = PortioPassUITests;
 			sourceTree = "<group>";
 		};
+		3DECB372254FB14900E2FD38 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3DECB384254FB1D200E2FD38 /* LaunchScreen.storyboard */,
+				3DECB385254FB1D200E2FD38 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3DECB3EF25506EF100E2FD38 /* PortioPassLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				3DECB376254FB1B000E2FD38 /* Utilities.swift */,
+				3DECB3F025506F2900E2FD38 /* Variables.swift */,
+			);
+			path = PortioPassLibrary;
+			sourceTree = "<group>";
+		};
+		FA5A6CAADDD610B8A5C7E418 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D8E6705255EB59600BEBAD8 /* XcodeKit.framework */,
+				4D486FDE823FB1E38691CA00 /* Pods_PortioPass.framework */,
+				D26ED6B404A9E0C626BA9233 /* Pods_PortioPass_PortioPassUITests.framework */,
+				BB6183BD50579C1D74DE1B48 /* Pods_PortioPassTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +217,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DECB366254FB14200E2FD38 /* Build configuration list for PBXNativeTarget "PortioPass" */;
 			buildPhases = (
+				C9854AF830586D28E129AAD1 /* [CP] Check Pods Manifest.lock */,
 				3DECB338254FB14100E2FD38 /* Sources */,
 				3DECB339254FB14100E2FD38 /* Frameworks */,
 				3DECB33A254FB14100E2FD38 /* Resources */,
+				4778F1144AF51DC6A4B91B98 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +236,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DECB369254FB14200E2FD38 /* Build configuration list for PBXNativeTarget "PortioPassTests" */;
 			buildPhases = (
+				4B6D011708A3B57028374424 /* [CP] Check Pods Manifest.lock */,
 				3DECB34E254FB14200E2FD38 /* Sources */,
 				3DECB34F254FB14200E2FD38 /* Frameworks */,
 				3DECB350254FB14200E2FD38 /* Resources */,
@@ -170,9 +255,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DECB36C254FB14200E2FD38 /* Build configuration list for PBXNativeTarget "PortioPassUITests" */;
 			buildPhases = (
+				0EF8088A1A034AC8A01D8AD5 /* [CP] Check Pods Manifest.lock */,
 				3DECB359254FB14200E2FD38 /* Sources */,
 				3DECB35A254FB14200E2FD38 /* Frameworks */,
 				3DECB35B254FB14200E2FD38 /* Resources */,
+				E752110BD5C00D00B1985B84 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,9 +318,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DECB34C254FB14200E2FD38 /* LaunchScreen.storyboard in Resources */,
+				3DECB387254FB1D200E2FD38 /* Main.storyboard in Resources */,
+				3DECB38F254FB2F800E2FD38 /* GoogleService-Info.plist in Resources */,
+				3DECB386254FB1D200E2FD38 /* LaunchScreen.storyboard in Resources */,
 				3DECB349254FB14200E2FD38 /* Assets.xcassets in Resources */,
-				3DECB347254FB14100E2FD38 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,13 +341,123 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0EF8088A1A034AC8A01D8AD5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PortioPass-PortioPassUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4778F1144AF51DC6A4B91B98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PortioPass/Pods-PortioPass-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PortioPass/Pods-PortioPass-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PortioPass/Pods-PortioPass-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B6D011708A3B57028374424 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PortioPassTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9854AF830586D28E129AAD1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PortioPass-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E752110BD5C00D00B1985B84 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PortioPass-PortioPassUITests/Pods-PortioPass-PortioPassUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PortioPass-PortioPassUITests/Pods-PortioPass-PortioPassUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PortioPass-PortioPassUITests/Pods-PortioPass-PortioPassUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3DECB338254FB14100E2FD38 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DECB380254FB1BF00E2FD38 /* LoginViewController.swift in Sources */,
+				3DECB37F254FB1BF00E2FD38 /* SignUpViewController.swift in Sources */,
+				3DECB3F62550867700E2FD38 /* AddPasswordViewController.swift in Sources */,
+				3DECB37E254FB1BF00E2FD38 /* LandingPageViewController.swift in Sources */,
+				3DECB3F125506F2900E2FD38 /* Variables.swift in Sources */,
 				3DECB344254FB14100E2FD38 /* ViewController.swift in Sources */,
 				3DECB340254FB14100E2FD38 /* AppDelegate.swift in Sources */,
+				3DECB377254FB1B000E2FD38 /* Utilities.swift in Sources */,
+				3DE1B515256BDDFD00D760AD /* PasswordUserInterfaceViewController.swift in Sources */,
 				3DECB342254FB14100E2FD38 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,25 +492,6 @@
 			targetProxy = 3DECB35E254FB14200E2FD38 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		3DECB345254FB14100E2FD38 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3DECB346254FB14100E2FD38 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3DECB34A254FB14200E2FD38 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3DECB34B254FB14200E2FD38 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3DECB364254FB14200E2FD38 /* Debug */ = {
@@ -433,6 +612,7 @@
 		};
 		3DECB367254FB14200E2FD38 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83E34D00526A21732F00CCE5 /* Pods-PortioPass.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -442,6 +622,7 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.saraholoumi.PortioPass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -452,6 +633,7 @@
 		};
 		3DECB368254FB14200E2FD38 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AC7D69701CFE27768EDCF9A /* Pods-PortioPass.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -461,6 +643,7 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.saraholoumi.PortioPass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -471,6 +654,7 @@
 		};
 		3DECB36A254FB14200E2FD38 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F997FE2B1D37785E648FA1FE /* Pods-PortioPassTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +677,7 @@
 		};
 		3DECB36B254FB14200E2FD38 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68A6010EC7D27B50A37F0A1C /* Pods-PortioPassTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +700,7 @@
 		};
 		3DECB36D254FB14200E2FD38 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FFE649D4EED639A00A2FA60 /* Pods-PortioPass-PortioPassUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -535,6 +721,7 @@
 		};
 		3DECB36E254FB14200E2FD38 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A867F60C86A5FD0A594F43E6 /* Pods-PortioPass-PortioPassUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
