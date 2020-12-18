@@ -12,6 +12,7 @@ import FirebaseAuth
 import Firebase
 
 class AddPasswordViewController: UIViewController {
+    
 
     let db = Firestore.firestore()
     
@@ -53,12 +54,12 @@ class AddPasswordViewController: UIViewController {
         let format = DateFormatter()
         format.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let formattedDate = format.string(from: date)
-        dateUpdated.text = "\t \(formattedDate)"
+        dateUpdated.text = "\(formattedDate)"
     }
     
     func addPriv() {
-        // By default the password is set to 1, specifying that the owner has the highest level of priviledge.
-        passwordPermission.text = "\t1"
+        // By default the password is set to Use - Change - Share , specifying that the owner has the highest level of priviledge.
+        passwordPermission.text = "Use+Change+Share"
     }
     @objc func editingChanged(_ textField: UITextField) {
         
@@ -85,12 +86,11 @@ class AddPasswordViewController: UIViewController {
     
     @IBAction func onAddBtnTapped(_ sender: Any) {
         let trimmedURL = websiteTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        let url = URL(string: trimmedURL)
-        let domainName = String((url?.host)!)
+        // Maybe get firestore to do this later... that way you know for sure they are never colliding.
+        let uuid = UUID().uuidString
         // Create user account object for new account being added
         let accountData: [String: Any] = [
-            domainName: [
+            uuid: [
                 "accountName": trimmedURL,
                 "accountUsername": accountUsername.text!.trimmingCharacters(in: .whitespacesAndNewlines),
                 "accountPassword": accountPassword.text!.trimmingCharacters(in: .whitespacesAndNewlines),
@@ -100,7 +100,7 @@ class AddPasswordViewController: UIViewController {
         ]
         // Get the user who is adding a new account
         let userData = Firestore.firestore().collection("users").document(Auth.auth().currentUser!.uid)
-        print(userData)
+        
         // Get data
         userData.getDocument { (document, error) in
             if let document = document, document.exists {
@@ -131,6 +131,7 @@ class AddPasswordViewController: UIViewController {
             } else {
                 print("Error. User data not found.")
             }
+            ModalTransitionMediator.instance.sendPopoverDismissed(modelChanged: true)
             self.dismiss(animated: true, completion: nil)
         }
     }

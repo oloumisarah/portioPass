@@ -11,16 +11,34 @@ import UIKit
 import FirebaseAuth
 import Firebase
 
-class LandingPageViewController: UIViewController, UIAdaptivePresentationControllerDelegate {
+class LandingPageViewController: UIViewController, UIAdaptivePresentationControllerDelegate, ModalTransitionListener {
+    func popoverDismissed() {
+        // reload the view here to update it
+        // Remove all of the current accounts
+        self.accounts.removeAll()
+        self.accountListStackView.removeFullyAllArrangedSubviews()
+        populateAccounts {
+            self.setAccountButtons()
+        }
+    }
     
-    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var accountListStackView: UIStackView!
+    
+    struct Cred {
+        var accountUID: String
+        var accountCreationDate: String
+        var accountName: String
+        var accountUsername: String
+        var accountPassword: String
+        var accountPermissions: String
+    }
     
     // Create an array of user objects
-    var accounts: [String] = []
+    var accounts: [Cred] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        ModalTransitionMediator.instance.setListener(listener: self)
         populateAccounts {
             self.setAccountButtons()
         }
@@ -35,9 +53,13 @@ class LandingPageViewController: UIViewController, UIAdaptivePresentationControl
                 let dataDescription = document.data()
                 // Get account Names
                 if ((dataDescription?["Accounts"]) != nil) {
+                    // Accounts will the dictionary of account, accountvalue pairs we get
                     if let accounts = dataDescription?["Accounts"] as? [AnyHashable: Any] {
-                        for (key,_) in accounts {
-                            self.accounts.append( key as! String)
+                        // For every account in accounts dictionary
+                        for (key, value) in accounts {
+                            let accountValue = value as! NSDictionary
+                            // For every key in account
+                            self.accounts.append(Cred(accountUID: key as! String ,accountCreationDate: accountValue["accountCreationDate"] as! String , accountName: accountValue["accountName"] as! String, accountUsername: accountValue["accountUsername"] as! String, accountPassword: accountValue["accountPassword"] as! String, accountPermissions: accountValue["accountPermissions"] as! String))
                         }
                     }
                 }
@@ -65,14 +87,24 @@ class LandingPageViewController: UIViewController, UIAdaptivePresentationControl
             button.layer.borderColor = #colorLiteral(red: 0.2903735017, green: 0.7607288099, blue: 0.6868186358, alpha: 1)
             button.layer.cornerRadius = 15
             button.layer.borderWidth = 1
-            button.setTitle(String(describing: account), for: .normal)
+            button.setTitle(String(describing: account.accountName), for: .normal)
             button.setTitleColor(#colorLiteral(red: 0.2901960784, green: 0.7607843137, blue: 0.7607843137, alpha: 1), for: .normal)
-            stackView.addArrangedSubview(button)
+            accountListStackView.addArrangedSubview(button)
             button.addTarget(self, action: #selector(self.buttonTapped), for: .touchUpInside)
         }
     }
     
     @objc func buttonTapped(_ sender: UIButton){
+        for account in accounts {
+            if account.accountName == sender.titleLabel?.text {
+                PortioPassVariables.accountCredentials.accountUID = account.accountUID
+                PortioPassVariables.accountCredentials.accountName = account.accountName
+                PortioPassVariables.accountCredentials.accountUsername = account.accountUsername
+                PortioPassVariables.accountCredentials.accountPassword = account.accountPassword
+                PortioPassVariables.accountCredentials.accountPermissions = account.accountPermissions
+                PortioPassVariables.accountCredentials.accountCreationDate = account.accountCreationDate
+            }
+        }
         // Create new view controller obj
         let passwordUIViewController = self.storyboard?.instantiateViewController(withIdentifier: PortioPassVariables.StoryboardConstants.passwordUIViewControllerID) as! PasswordUserInterfaceViewController
         // Go to the other view controller
@@ -96,5 +128,5 @@ class LandingPageViewController: UIViewController, UIAdaptivePresentationControl
         self.present(navController, animated:true, completion: nil)
 
     }
-
+    
 }

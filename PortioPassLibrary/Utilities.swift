@@ -58,6 +58,21 @@ extension UITextField {
   }
 }
 
+extension UIStackView {
+
+    func removeFully(view: UIView) {
+        removeArrangedSubview(view)
+        view.removeFromSuperview()
+    }
+
+    func removeFullyAllArrangedSubviews() {
+        arrangedSubviews.forEach { (view) in
+            removeFully(view: view)
+        }
+    }
+
+}
+
 class Utilities {
     // Checks Password strength w reference to https://medium.com/swlh/password-validation-in-swift-5-3de161569910
     static func isPasswordGood(_ password : String) -> Bool {
@@ -65,5 +80,37 @@ class Utilities {
         let userPassword = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{10,}")
         // returns true if password is strong enough
         return userPassword.evaluate(with: password)
+    }
+}
+
+class RecipientButton: UIButton {
+    var recipientUID: String?
+}
+
+public protocol ModalTransitionListener {
+    func popoverDismissed()
+}
+
+class ModalTransitionMediator {
+    /* Singleton */
+    class var instance: ModalTransitionMediator {
+        struct Static {
+            static let instance: ModalTransitionMediator = ModalTransitionMediator()
+        }
+        return Static.instance
+    }
+
+    private var listener: ModalTransitionListener?
+
+    private init() {
+
+    }
+
+    func setListener(listener: ModalTransitionListener) {
+        self.listener = listener
+    }
+
+    func sendPopoverDismissed(modelChanged: Bool) {
+        listener?.popoverDismissed()
     }
 }
