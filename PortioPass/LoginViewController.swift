@@ -58,8 +58,8 @@ class LoginViewController: UIViewController {
         // Validate user input
         validateUserInput()
         // Login user
-        //Auth.auth().signIn(withEmail: EmailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines), password: PasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines) {
-        Auth.auth().signIn(withEmail: "test1@gmail.com", password: "Admin1234!") { (authenticationResult, error) in
+        //Auth.auth(). {
+        Auth.auth().signIn(withEmail: EmailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines), password: PasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)) { (authenticationResult, error) in
             
             if error != nil {
                 // trouble signing in due to bad password/email pair
