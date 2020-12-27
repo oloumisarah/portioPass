@@ -58,7 +58,6 @@ class LoginViewController: UIViewController {
         // Validate user input
         validateUserInput()
         // Login user
-        //Auth.auth(). {
         Auth.auth().signIn(withEmail: EmailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines), password: PasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)) { (authenticationResult, error) in
             
             if error != nil {

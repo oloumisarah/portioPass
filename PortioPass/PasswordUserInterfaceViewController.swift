@@ -58,8 +58,8 @@ class PasswordUserInterfaceViewController: UIViewController, UIPickerViewDelegat
         }
         else {
             selectedPerm = ""
-            datePicker.isHidden = true
-            permPicker.isHidden = true
+            datePicker.isEnabled = false
+            permPicker.isHidden = false
             shareExpDateLabel.text = "Share Exp. Date : N\\A"
             sharePermLabel.text = "Share Permissions: N\\A"
         }

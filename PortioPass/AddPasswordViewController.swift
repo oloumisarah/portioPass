@@ -119,7 +119,7 @@ class AddPasswordViewController: UIViewController {
                 // if "Accounts" is empty
                 else {
                     // set the user Data if there is nothing in accounts.
-                    userData.setData(["Accounts" : accountData]) { err in
+                    userData.setData(["Accounts" : accountData], merge: true) { err in
                         if let err = err {
                             print("Error writing document: \(err)")
                         } else {
